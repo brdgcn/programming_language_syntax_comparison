@@ -53,6 +53,8 @@
 - [Language Specific](#language-specific)
 
 ## Python vs Javascript vs PHP
+. = documentation link <br>
+Y = youtube video link
 |        | Python | Javascript | PHP |
 | ------ | ------ | ---------- | --- |
 |Supports DB|Yes|No|Yes|
@@ -62,17 +64,25 @@
 
 |Important Syntax | Python | Javascript | PHP |
 | ------ | ------ | ---------- | --- |
-|Functions| def myFunc()| function myFunc()| function myFunc()|
-|Arrow Functions||let myFunc = (a, b) => a * b; |$myFunc = fn($a, $b) => $a * $b;|
-|Arrow Functions can modify outside variables|N/A |Yes|No| 
+|Functions| def myFn()| const myFn = Fn(x, y){return x*y} [.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)|$fn name = fn myFn($x, $y){return $x*$y} [.](https://www.php.net/manual/en/functions.variable-functions.php)|
+|Arrow Functions|n/a |let myFn = (a, b) => a * b; |$myFn = fn($a, $b) => $a * $b;|
+|Arrow Functions can modify outside variables|n/a |Yes [.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)  [Y](https://www.youtube.com/watch?v=N8JTeJ87Rk8&ab_channel=Acadea.io)|No| 
+|map| map(lambda x: x*2, lst)| arr.map(x => x * 2)|array_map(fn($x) => $x * 2, $arr);|
+|=> map| n/a | const myFn = arr.map(i => i.length);|  |
+|Filter| filter(lambda x: x%2 == 0, lst)|newArr = arr.filter(x => x % 2 == 0)|array_filter($arr, fn($x) => $x % 2 == 0);|
+|Reduce| functools.reduce(lambda a, b: a+b, lst) | arr.reduce((a, b) => a + b, 0);|array_reduce($arr, fn($a, $b) => $a + $b, 0);|
 |Conditional Statement| if, elif, else| if, else if, else| if, else if, else|
 |If | if myVar:| if (myVar === true) {| if ($myVar === true) {|
-|Loops| for, while| for, while| for, while|
+|foeach| for for i, v in enumerate([lst]): print(i, v)| arr.foreach((item, index, arr =>{item.key, index, array}| foreach ($arr as $k => $v) {$k, $v}|
 |Class| class MyClass():| class MyClass{}| class MyClass{}|
-|Object| myObj = MyClass()| var myObj = new MyClass();| $myObj = new MyClass();|
+|Object| myObj = MyClass()| const myObj = new MyClass();| $myObj = new MyClass();|
+
 
 |Other Syntax        | Python | Javascript | PHP |
 | ------ | ------ | ---------- | --- |
+|For| for i in range(0, 10):| for (let i = 0; i < 10; i++) {| for ($i = 0; $i < 10; $i++) {|
+|While| while myVar:| while (myVar === true) {| while ($myVar === true) {|
+|Instantiation| myObj = MyClass()| var myObj = new MyClass();| $myObj = new MyClass();|
 |Variable declaration| myVar = 1| var myVar = 1| $myVar = 1|
 |Variable declaration float| myVar = 1.0| var myVar = 1.0| $myVar = 1.0|
 |Variable declaration None| myVar = None| var myVar = null| $myVar = null|
